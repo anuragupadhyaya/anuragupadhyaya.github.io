@@ -1,1 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>Anurag Upadhyaya - Staff Data Scientist & AI Systems Architect</title>
+  <meta name="title" content="Anurag Upadhyaya - Staff Data Scientist & AI Systems Architect">
+  <meta name="description" content="Portfolio and professional resume of Anurag Upadhyaya, Staff Data Scientist specializing in LLM Post-Training (SFT, PEFT/LoRA, DPO), Multi-Agent Orchestration (Temporal.io), and High-Throughput Inference (vLLM, BentoML).">
+  <meta name="keywords" content="Staff Data Scientist, AI Systems Architect, LLM Alignment, SFT, DPO, RLAIF, PEFT, LoRA, vLLM, BentoML, Temporal.io, Multi-Agent Systems, Data Science">
+  <meta name="author" content="Anurag Upadhyaya">
 
+  <!-- Open Graph / Facebook / LinkedIn Previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anuragupadhyaya.github.io/">
+  <meta property="og:title" content="Anurag Upadhyaya - Staff Data Scientist & AI Systems Architect">
+  <meta property="og:description" content="12-year trajectory across Classical ML, Deep Learning, LLM Post-Training, and Agentic AI Systems Architecture.">
+  <meta property="og:image" content="https://anuragupadhyaya.github.io/og-image.png">
+
+  <!-- Structured Data (JSON-LD) for Search Engine Indexing -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Anurag Upadhyaya",
+    "jobTitle": "Staff Data Scientist & AI Systems Architect",
+    "email": "anurag.upadhyaya.28@gmail.com",
+    "telephone": "+91-8056028027",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bangalore",
+      "addressCountry": "India"
+    },
+    "url": "https://anuragupadhyaya.github.io/",
+    "sameAs": [
+      "https://linkedin.com/in/anuragu/"
+    ],
+    "almaMater": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "BITS Pilani"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "Sathyabama University"
+      }
+    ],
+    "knowsAbout": [
+      "Large Language Models",
+      "Supervised Fine-Tuning (SFT)",
+      "Direct Preference Optimization (DPO)",
+      "Parameter-Efficient Fine-Tuning (PEFT/LoRA)",
+      "vLLM & BentoML Serving",
+      "Temporal.io Orchestration",
+      "Computer Vision",
+      "Mathematical Optimization"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+      --border: #334155;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--text-main);
+      margin-bottom: 0.25rem;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .contact-info a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .summary-text {
+      color: #e2e8f0;
+      font-size: 1.05rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .skill-card h3 {
+      font-size: 1rem;
+      color: var(--text-main);
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .job {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 0.75rem;
+    }
+
+    .job-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .company {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .job-meta {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 1.25rem;
+    }
+
+    li {
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+
+    li strong {
+      color: var(--text-main);
+    }
+
+    .edu-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      margin-bottom: 0.75rem;
+    }
+
+    .edu-degree {
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .edu-school {
+      color: var(--accent);
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 600px) {
+      .job-header {
+        flex-direction: column;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Anurag Upadhyaya</h1>
+      <div class="subtitle">Staff Data Scientist & AI Systems Architect</div>
+      <div class="contact-info">
+        <span>📍 Bangalore, India</span>
+        <span>📞 +91-8056028027</span>
+        <span>✉️ <a href="mailto:anurag.upadhyaya.28@gmail.com">anurag.upadhyaya.28@gmail.com</a></span>
+        <span>🔗 <a href="https://linkedin.com/in/anuragu/" target="_blank" rel="noopener">linkedin.com/in/anuragu/</a></span>
+      </div>
+    </header>
+
+    <section id="summary">
+      <h2>Professional Summary</h2>
+      <p class="summary-text">
+        Staff Data Scientist with a 12-year trajectory across Classical ML, Deep Learning, and Post-Training Optimization. Expert in building reliable AI systems by scaling predictive modeling, deep architectures, and aligning foundation models via SFT and RLAIF. Proven track record optimizing high-throughput production inference and building automated architectures to validate complex model outputs.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Technical Skills & Taxonomy</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>GenAI & Foundation Models</h3>
+          <p>SOTA LLMs/VLMs, MoE, Transformers, SFT, RLHF, DPO, RLAIF, PEFT (LoRA), Prompt Alignment.</p>
+        </div>
+        <div class="skill-card">
+          <h3>Agentic Infrastructure</h3>
+          <p>Temporal.io, Directed Acyclic Graphs (DAGs), Model Context Protocol (MCP), LiteLLM, Human-in-the-Loop (HITL).</p>
+        </div>
+        <div class="skill-card">
+          <h3>Applied DS & Optimization</h3>
+          <p>Time-Series (LSTM), Computer Vision (ResNet-50), Genetic Algorithms, PSO, Multi-Class Classifiers, Regression.</p>
+        </div>
+        <div class="skill-card">
+          <h3>Architecture & Governance</h3>
+          <p>BentoML, vLLM, Celery, RabbitMQ, PostgreSQL, MongoDB, Python, PyTorch, Flask, NVIDIA NeMo Guardrails, Arize Phoenix, OpenTelemetry.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Professional Experience</h2>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title">AI Product Lead / Lead Data Scientist Track</div>
+            <div class="company">Symphony AI Pvt. Ltd.</div>
+          </div>
+          <div class="job-meta">Bangalore | Apr 2021 – Present</div>
+        </div>
+        <ul>
+          <li><strong>Post-Training Data Pipeline:</strong> Orchestrated a scalable post-training data pipeline utilizing advanced sampling, heuristic filtering, and programmatic transformations to synthesize a highly refined corpus of 10k high-fidelity agent reasoning trajectories. Built an autonomous LLM-as-a-judge evaluation protocol paired with Human-in-the-Loop (HITL) alignment, iteratively optimizing evaluation rubrics against 1,000+ expert-scored samples to achieve a 92% statistical correlation with human preferences while accelerating the data-generation lifecycle by 60%.</li>
+          <li><strong>Open-Source Fine-Tuning Execution:</strong> Spearheaded the model adaptation pipeline utilizing Hugging Face TRL to execute Supervised Fine-Tuning (SFT) on a Llama-3 (8B) foundation model. Engineered parameter-efficient fine-tuning via PEFT (LoRA) on the synthesized 10k domain corpus to achieve a 98% tool-calling accuracy and drop redundant agent execution steps by 50% for automated compliance workflows.</li>
+          <li><strong>Multi-Agent Workflow Orchestration:</strong> Coordinated the architectural deployment of 4 specialized sub-agents (Narrative, Subject Profile, Transactional Analysis, and RAG Web-Search) built as independent Temporal.io workflows on an in-house agent platform. Engineered each workflow to query the custom fine-tuned AML LLM (SFT) asynchronously, injecting transaction monitoring system (TMS) highlighted alerts and raw ledger logs to populate decoupled UI regions—collapsing the SAR filing lifecycle from 14 days to 3 days.</li>
+          <li><strong>Distributed Inference & Serving Layer:</strong> Architected a low-latency inference cluster to host the custom 8B AML LLM across 3 commercial banks utilizing BentoML integrated with a vLLM engine backend. Optimized concurrent traffic handling by tuning PagedAttention memory parameters and continuous batching, constraining active context sequences to &lt;10k tokens per request to eliminate GPU OOM spikes—securing a 40% gain in aggregate throughput while driving tail latencies (TTFT &lt;150ms; stable P99 ITL) within strict banking SLAs.</li>
+          <li><strong>Online Agent Governance & Response Drift Analytics:</strong> Engineered an automated, production-grade online evaluation suite executing real-time LLM-as-a-judge protocols paired with active guardrails (NVIDIA NeMo) to intercept hallucinations. Captured human investigator corrective feedback to iteratively expand the post-training data engine for downstream model alignments, while utilizing embedding-space cosine distance tracking to continuously flag longitudinal agent response drift over time.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title">Senior Data Scientist</div>
+            <div class="company">MachineHack by Analytics India Magazine (AIM)</div>
+          </div>
+          <div class="job-meta">Bangalore | Jan 2020 – Apr 2021</div>
+        </div>
+        <ul>
+          <li><strong>Platform Migration & Scaling:</strong> Led the zero-to-one phased migration of a legacy, monolith application into a decoupled, service-oriented architecture with a standalone UI and high-throughput Python/Flask backend. Scaled the global platform to 1M+ total users (100K MAU) and architected end-to-end execution environments for 20+ comprehensive data science competitions.</li>
+          <li><strong>High-Throughput Infrastructure:</strong> Led a cross-functional team of 5 engineers to deploy a distributed asynchronous evaluation engine via Celery and RabbitMQ, processing 25K daily submissions from 5K concurrent users. Implemented an optimized dual-database layer (PostgreSQL for identities/transactions; MongoDB for high-velocity event logs) and integrated JupyterHub to maximize session times.</li>
+          <li><strong>Productization & B2B Monetization:</strong> Built 20+ automated evaluation modules validating machine learning submissions against ground-truth objective functions. Commercialized these predictive tracking modules into a turnkey, enterprise-grade B2B technical hiring tool, generating $400K in net-new revenue within a 12-month span.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title">Associate Consultant</div>
+            <div class="company">Capgemini India PVT. LTD.</div>
+          </div>
+          <div class="job-meta">Bangalore | Mar 2017 – Jan 2019</div>
+        </div>
+        <ul>
+          <li><strong>Applied ML & Quality Systems Engineering:</strong> Designed and productized an ensemble machine learning regression model (KNN/Decision Trees) to predict Yield Stress and Tensile Strength across 10K hardware production samples; achieved a tight ±5 MAE to successfully deprecate legacy, hard-coded physics models.</li>
+          <li><strong>Computer Vision Edge Systems:</strong> Developed a zero-to-one computer vision inspection system for manufacturing quality control. Engineered an end-to-end edge inference pipeline that processed high-velocity image streams from high-speed cameras, applying data-preprocessing layers and ResNet-50 classification architectures to achieve 80% automated inspection accuracy across 10K billets.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title">Associate Data Scientist</div>
+            <div class="company">Yottaasys AI Products Pvt. Ltd.</div>
+          </div>
+          <div class="job-meta">Bangalore | Sep 2016 – Mar 2017</div>
+        </div>
+        <ul>
+          <li>Contributed machine learning algorithms to a core product known as Decision Sciences Factory (DSF). This platform served as a workflow-based solution for comprehensive data ingestion, processing, model development, and model deployment.</li>
+          <li>Created and developed a text data pre-processing layer on the platform, providing out-of-the-box text processing capabilities, including stop-word removal, stemming, lemmatization, and regex-based text parsing.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title">Senior Research Engineer, R&D</div>
+            <div class="company">Toshiba Software India Pvt. Ltd.</div>
+          </div>
+          <div class="job-meta">Hyderabad | Apr 2013 – July 2016</div>
+        </div>
+        <ul>
+          <li>Created automation scripts for monitoring application logs of a distributed banking web application for Discover Bank USA, replacing manual log monitoring with automated shell scripts running as cron jobs.</li>
+          <li>Provided backend support for distributed web applications, including dashboard creation using the ELK stack for backend metrics summary.</li>
+          <li>Ranked in the top 1% among 250 peers, earning the Game Changer Award and receiving a double promotion.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="edu-item">
+        <div class="edu-degree">M.Tech in Software Systems (Data Science & Machine Learning)</div>
+        <div class="edu-school">BITS Pilani</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">B.Tech in Electronics and Telecommunications</div>
+        <div class="edu-school">Sathyabama University, Chennai</div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Anurag Upadhyaya. Hosted on GitHub Pages.</p>
+    </footer>
+  </div>
+
+</body>
+</html>
