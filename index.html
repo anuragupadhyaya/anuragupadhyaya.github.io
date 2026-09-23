@@ -4,21 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- Primary SEO Meta Tags -->
+  <!-- SEO & Primary Meta Tags -->
   <title>Anurag Upadhyaya - Staff Data Scientist & AI Systems Architect</title>
   <meta name="title" content="Anurag Upadhyaya - Staff Data Scientist & AI Systems Architect">
-  <meta name="description" content="Portfolio and professional resume of Anurag Upadhyaya, Staff Data Scientist specializing in LLM Post-Training (SFT, PEFT/LoRA, DPO), Multi-Agent Orchestration (Temporal.io), and High-Throughput Inference (vLLM, BentoML).">
-  <meta name="keywords" content="Staff Data Scientist, AI Systems Architect, LLM Alignment, SFT, DPO, RLAIF, PEFT, LoRA, vLLM, BentoML, Temporal.io, Multi-Agent Systems, Data Science">
+  <meta name="description" content="Resume and professional portfolio of Anurag Upadhyaya, Staff Data Scientist specializing in LLM Post-Training, Multi-Agent Orchestration, and High-Throughput Inference Systems.">
+  <meta name="keywords" content="Staff Data Scientist, AI Systems Architect, Post-Training Alignment, SFT, DPO, RLAIF, PEFT, LoRA, vLLM, BentoML, Temporal.io, Multi-Agent Systems, Machine Learning">
   <meta name="author" content="Anurag Upadhyaya">
 
-  <!-- Open Graph / Facebook / LinkedIn Previews -->
+  <!-- Open Graph / LinkedIn / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://anuragupadhyaya.github.io/">
   <meta property="og:title" content="Anurag Upadhyaya - Staff Data Scientist & AI Systems Architect">
   <meta property="og:description" content="12-year trajectory across Classical ML, Deep Learning, LLM Post-Training, and Agentic AI Systems Architecture.">
   <meta property="og:image" content="https://anuragupadhyaya.github.io/og-image.png">
 
-  <!-- Structured Data (JSON-LD) for Search Engine Indexing -->
+  <!-- Schema.org JSON-LD Structured Data for Search Engine Crawlers -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -61,13 +61,13 @@
 
   <style>
     :root {
-      --bg: #0f172a;
-      --card-bg: #1e293b;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --accent: #38bdf8;
-      --accent-hover: #0284c7;
-      --border: #334155;
+      --bg-color: #ffffff;
+      --text-main: #111827;
+      --text-secondary: #374151;
+      --text-muted: #6b7280;
+      --accent: #2563eb;
+      --border-color: #e5e7eb;
+      --card-bg: #fafafa;
     }
 
     * {
@@ -77,176 +77,231 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
       color: var(--text-main);
       line-height: 1.6;
-      padding: 2rem 1rem;
+      padding: 3rem 1.5rem;
+      -webkit-font-smoothing: antialiased;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 820px;
       margin: 0 auto;
     }
 
+    /* Header Styling */
     header {
-      border-bottom: 1px solid var(--border);
       padding-bottom: 2rem;
-      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 2.5rem;
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
       color: var(--text-main);
       margin-bottom: 0.25rem;
     }
 
     .subtitle {
-      font-size: 1.25rem;
-      color: var(--accent);
+      font-size: 1.15rem;
       font-weight: 500;
-      margin-bottom: 1rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.25rem;
     }
 
     .contact-info {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.25rem;
-      font-size: 0.95rem;
-      color: var(--text-muted);
-    }
-
-    .contact-info a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      margin-bottom: 2.5rem;
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--accent);
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.5rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .summary-text {
-      color: #e2e8f0;
-      font-size: 1.05rem;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-    }
-
-    .skill-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      padding: 1rem;
-      border-radius: 8px;
-    }
-
-    .skill-card h3 {
-      font-size: 1rem;
-      color: var(--text-main);
-      margin-bottom: 0.5rem;
-    }
-
-    .skill-card p {
+      gap: 1rem 1.5rem;
       font-size: 0.9rem;
       color: var(--text-muted);
     }
 
+    .contact-info a {
+      color: var(--text-main);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: #d1d5db;
+      transition: text-decoration-color 0.2s ease;
+    }
+
+    .contact-info a:hover {
+      text-decoration-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* Section Styling */
+    section {
+      margin-bottom: 2.75rem;
+    }
+
+    h2 {
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.35rem;
+    }
+
+    p.summary-text {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* Skills Layout */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+    }
+
+    .skill-card h3 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 0.35rem;
+    }
+
+    .skill-card p {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* Work Experience */
     .job {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      padding: 1.5rem;
-      border-radius: 8px;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .job:last-child {
+      margin-bottom: 0;
     }
 
     .job-header {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: baseline;
       flex-wrap: wrap;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
     }
 
     .job-title {
-      font-size: 1.15rem;
+      font-size: 1.05rem;
       font-weight: 600;
       color: var(--text-main);
     }
 
     .company {
-      color: var(--accent);
       font-weight: 500;
+      color: var(--text-secondary);
     }
 
     .job-meta {
-      font-size: 0.875rem;
+      font-size: 0.85rem;
       color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
     }
 
     ul {
-      list-style-type: disc;
-      padding-left: 1.25rem;
+      list-style-type: none;
+      padding-left: 0;
     }
 
     li {
-      margin-bottom: 0.75rem;
-      color: #cbd5e1;
-      font-size: 0.95rem;
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.65rem;
+      font-size: 0.935rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    li::before {
+      content: "•";
+      position: absolute;
+      left: 0.25rem;
+      top: 0;
+      color: var(--text-muted);
+      font-size: 1rem;
     }
 
     li strong {
       color: var(--text-main);
+      font-weight: 600;
     }
 
+    /* Education */
     .edu-item {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      padding: 1rem 1.25rem;
-      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
       margin-bottom: 0.75rem;
     }
 
     .edu-degree {
+      font-size: 0.95rem;
       font-weight: 600;
       color: var(--text-main);
     }
 
     .edu-school {
-      color: var(--accent);
       font-size: 0.9rem;
-    }
-
-    footer {
-      text-align: center;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
       color: var(--text-muted);
-      font-size: 0.85rem;
     }
 
-    @media (max-width: 600px) {
-      .job-header {
-        flex-direction: column;
+    /* Footer */
+    footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Print Optimization */
+    @media print {
+      body {
+        padding: 0;
+        color: #000;
       }
-      h1 {
-        font-size: 2rem;
+      .container {
+        max-width: 100%;
+      }
+      .skill-card {
+        background-color: transparent;
+        border: 1px solid #ddd;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 1.5rem 1rem;
+      }
+      .job-header, .edu-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .skills-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -273,7 +328,7 @@
     </section>
 
     <section id="skills">
-      <h2>Technical Skills & Taxonomy</h2>
+      <h2>Technical Taxonomy & Capabilities</h2>
       <div class="skills-grid">
         <div class="skill-card">
           <h3>GenAI & Foundation Models</h3>
@@ -300,10 +355,10 @@
       <div class="job">
         <div class="job-header">
           <div>
-            <div class="job-title">AI Product Lead / Lead Data Scientist Track</div>
-            <div class="company">Symphony AI Pvt. Ltd.</div>
+            <span class="job-title">AI Product Lead / Lead Data Scientist Track</span> 
+            <span class="company">— Symphony AI Pvt. Ltd.</span>
           </div>
-          <div class="job-meta">Bangalore | Apr 2021 – Present</div>
+          <div class="job-meta">Apr 2021 – Present | Bangalore</div>
         </div>
         <ul>
           <li><strong>Post-Training Data Pipeline:</strong> Orchestrated a scalable post-training data pipeline utilizing advanced sampling, heuristic filtering, and programmatic transformations to synthesize a highly refined corpus of 10k high-fidelity agent reasoning trajectories. Built an autonomous LLM-as-a-judge evaluation protocol paired with Human-in-the-Loop (HITL) alignment, iteratively optimizing evaluation rubrics against 1,000+ expert-scored samples to achieve a 92% statistical correlation with human preferences while accelerating the data-generation lifecycle by 60%.</li>
@@ -317,10 +372,10 @@
       <div class="job">
         <div class="job-header">
           <div>
-            <div class="job-title">Senior Data Scientist</div>
-            <div class="company">MachineHack by Analytics India Magazine (AIM)</div>
+            <span class="job-title">Senior Data Scientist</span> 
+            <span class="company">— MachineHack by Analytics India Magazine</span>
           </div>
-          <div class="job-meta">Bangalore | Jan 2020 – Apr 2021</div>
+          <div class="job-meta">Jan 2020 – Apr 2021 | Bangalore</div>
         </div>
         <ul>
           <li><strong>Platform Migration & Scaling:</strong> Led the zero-to-one phased migration of a legacy, monolith application into a decoupled, service-oriented architecture with a standalone UI and high-throughput Python/Flask backend. Scaled the global platform to 1M+ total users (100K MAU) and architected end-to-end execution environments for 20+ comprehensive data science competitions.</li>
@@ -332,10 +387,10 @@
       <div class="job">
         <div class="job-header">
           <div>
-            <div class="job-title">Associate Consultant</div>
-            <div class="company">Capgemini India PVT. LTD.</div>
+            <span class="job-title">Associate Consultant</span> 
+            <span class="company">— Capgemini India Pvt. Ltd.</span>
           </div>
-          <div class="job-meta">Bangalore | Mar 2017 – Jan 2019</div>
+          <div class="job-meta">Mar 2017 – Jan 2019 | Bangalore</div>
         </div>
         <ul>
           <li><strong>Applied ML & Quality Systems Engineering:</strong> Designed and productized an ensemble machine learning regression model (KNN/Decision Trees) to predict Yield Stress and Tensile Strength across 10K hardware production samples; achieved a tight ±5 MAE to successfully deprecate legacy, hard-coded physics models.</li>
@@ -346,10 +401,10 @@
       <div class="job">
         <div class="job-header">
           <div>
-            <div class="job-title">Associate Data Scientist</div>
-            <div class="company">Yottaasys AI Products Pvt. Ltd.</div>
+            <span class="job-title">Associate Data Scientist</span> 
+            <span class="company">— Yottaasys AI Products Pvt. Ltd.</span>
           </div>
-          <div class="job-meta">Bangalore | Sep 2016 – Mar 2017</div>
+          <div class="job-meta">Sep 2016 – Mar 2017 | Bangalore</div>
         </div>
         <ul>
           <li>Contributed machine learning algorithms to a core product known as Decision Sciences Factory (DSF). This platform served as a workflow-based solution for comprehensive data ingestion, processing, model development, and model deployment.</li>
@@ -360,15 +415,15 @@
       <div class="job">
         <div class="job-header">
           <div>
-            <div class="job-title">Senior Research Engineer, R&D</div>
-            <div class="company">Toshiba Software India Pvt. Ltd.</div>
+            <span class="job-title">Senior Research Engineer, R&D</span> 
+            <span class="company">— Toshiba Software India Pvt. Ltd.</span>
           </div>
-          <div class="job-meta">Hyderabad | Apr 2013 – July 2016</div>
+          <div class="job-meta">Apr 2013 – July 2016 | Hyderabad</div>
         </div>
         <ul>
-          <li>Created automation scripts for monitoring application logs of a distributed banking web application for Discover Bank USA, replacing manual log monitoring with automated shell scripts running as cron jobs.</li>
-          <li>Provided backend support for distributed web applications, including dashboard creation using the ELK stack for backend metrics summary.</li>
-          <li>Ranked in the top 1% among 250 peers, earning the Game Changer Award and receiving a double promotion.</li>
+          <li><strong>High-Dimensional Anomaly Detection:</strong> Engineered a multi-class classification pipeline to identify process anomalies in hot-strip rolling, reducing error rates to &lt;10%. Built an extraction framework deriving ~2.5K statistical features (Moments of Distribution/rolling stats) from raw time-series sensors, using linear (PCA) and non-linear (Autoencoder) reduction to optimize input sets for Deep Neural Networks and Ensemble models.</li>
+          <li><strong>Predictive Maintenance Time-Series Systems:</strong> Developed a univariate time-series framework using Long Short-Term Memory (LSTM) networks to model heater temperature degradation trajectories and forecast Remaining Useful Life (RUL). Delivered an automated 14-day maintenance lead time with 90% prediction accuracy, eliminating unplanned downtime.</li>
+          <li><strong>Constrained Mathematical Optimization:</strong> Solved the complex "Economic Dispatch" power planning problem for a 10-generator grid by building a 24-hour dynamic optimization engine. Developed a hybrid framework combining Genetic Algorithms and Particle Swarm Optimization (PSO) to satisfy non-linear system constraints, maximizing overall grid power output efficiency.</li>
         </ul>
       </div>
     </section>
@@ -386,7 +441,7 @@
     </section>
 
     <footer>
-      <p>&copy; 2026 Anurag Upadhyaya. Hosted on GitHub Pages.</p>
+      <p>&copy; 2026 Anurag Upadhyaya. All rights reserved.</p>
     </footer>
   </div>
 
