@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Anurag Upadhyaya</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #fafafa;
+      --border: #e2e8f0;
+      --text-main: #0f172a;
+      --text-body: #334155;
+      --text-muted: #64748b;
+      --accent: #2563eb;
+      --radius: 8px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-body);
+      line-height: 1.65;
+      padding: 2.5rem 1.5rem;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 860px; margin: 0 auto; }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2.5rem;
+    }
+    .nav-brand { font-size: 1.15rem; font-weight: 700; color: var(--text-main); text-decoration: none; }
+    .nav-links { display: flex; gap: 1.5rem; font-size: 0.9rem; font-weight: 500; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; }
+    .nav-links a.active, .nav-links a:hover { color: var(--text-main); font-weight: 600; }
+    
+    h1 { font-size: 2.25rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.25rem; letter-spacing: -0.02em; }
+    .subtitle { font-size: 1.15rem; font-weight: 600; color: var(--text-main); margin-bottom: 1.25rem; }
+    .contact-bar { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 2.5rem; }
+    .contact-bar a { color: var(--text-main); text-decoration: underline; text-underline-offset: 3px; }
+    
+    section { margin-bottom: 2.75rem; }
+    .section-title { font-size: 0.875rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-main); border-bottom: 1px solid var(--text-main); padding-bottom: 0.35rem; margin-bottom: 1.25rem; }
+    
+    .job { margin-bottom: 2rem; }
+    .job-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 0.35rem; }
+    .job-title { font-size: 1.05rem; font-weight: 700; color: var(--text-main); }
+    .company { font-weight: 600; color: var(--accent); }
+    .job-meta { font-size: 0.85rem; color: var(--text-muted); }
+    
+    ul { list-style: none; padding-left: 0; }
+    li { position: relative; padding-left: 1.25rem; margin-bottom: 0.65rem; font-size: 0.935rem; }
+    li::before { content: "—"; position: absolute; left: 0; color: var(--text-muted); }
+    li strong { color: var(--text-main); font-weight: 600; }
+    
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 1rem; }
+    .skill-card { background-color: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; }
+    .skill-card h3 { font-size: 0.9rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.35rem; }
+    .skill-card p { font-size: 0.875rem; color: var(--text-body); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="index.html" class="nav-brand">Anurag Upadhyaya</a>
+      <div class="nav-links">
+        <a href="index.html">Blog</a>
+        <a href="about.html" class="active">About Me</a>
+      </div>
+    </nav>
+
+    <header>
+      <h1>Anurag Upadhyaya</h1>
+      <div class="subtitle">Technical AI Product Leader & AI Systems Architect</div>
+      <div class="contact-bar">
+        <span>📍 Bangalore, India</span>
+        <span>✉️ <a href="mailto:anurag.upadhyaya.28@gmail.com">anurag.upadhyaya.28@gmail.com</a></span>
+        <span>🔗 <a href="https://linkedin.com/in/anuragu/" target="_blank">linkedin.com/in/anuragu</a></span>
+      </div>
+    </header>
+
+    <section>
+      <div class="section-title">Executive Profile</div>
+      <p>
+        Technical AI Product Leader & AI Systems Architect with a 12-year trajectory spanning Applied Machine Learning, Post-Training Alignment, and Enterprise Platform Engineering. Expert in converting foundation model research into governed, high-throughput agentic platforms through deep operational mastery of SOTA LLM architectures, post-training alignments (SFT, PEFT/LoRA, DPO), stateful orchestration (Temporal.io), and distributed inference (vLLM, BentoML).
+      </p>
+    </section>
+
+    <section>
+      <div class="section-title">Technical Capabilities</div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>GenAI & Foundation Models</h3>
+          <p>SOTA Transformers, MoE, SFT, RLHF, DPO, RLAIF, PEFT (LoRA), Prompt Alignment.</p>
+        </div>
+        <div class="skill-card">
+          <h3>Agentic Infrastructure</h3>
+          <p>Temporal.io (Stateful DAGs), Model Context Protocol (MCP), LiteLLM Gateways, HITL Systems.</p>
+        </div>
+        <div class="skill-card">
+          <h3>Inference & Serving</h3>
+          <p>vLLM Engine, BentoML, PagedAttention, Continuous Batching, TTFT/ITL Latency Optimization.</p>
+        </div>
+        <div class="skill-card">
+          <h3>Governance & Observability</h3>
+          <p>LLM-as-a-Judge, NVIDIA NeMo Guardrails, Arize Phoenix, OpenTelemetry, Cosine Drift Tracking.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Experience</div>
+      <div class="job">
+        <div class="job-header">
+          <div><span class="job-title">AI Product Lead / Lead Data Scientist Track</span> <span class="company">— SymphonyAI</span></div>
+          <div class="job-meta">Apr 2021 – Present | Bangalore</div>
+        </div>
+        <ul>
+          <li><strong>Agentic Platform Delivery:</strong> Productized a multi-tenant Enterprise Agentic AI platform across 3 live commercial bank deployments, collapsing the Suspicious Activity Report (SAR) filing lifecycle from 14 days to 3 days (80% TTR reduction).</li>
+          <li><strong>Fine-Tuning Execution:</strong> Executed Supervised Fine-Tuning (SFT) on Llama-3 (8B) via Hugging Face TRL and PEFT (LoRA) on a 10k synthetic reasoning corpus, achieving 98% tool-calling accuracy.</li>
+          <li><strong>Distributed Inference:</strong> Architected a low-latency BentoML/vLLM inference cluster, tuning PagedAttention parameters to secure a 40% gain in aggregate throughput with TTFT &lt; 150ms.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div><span class="job-title">Senior Data Scientist</span> <span class="company">— MachineHack (Analytics India Magazine)</span></div>
+          <div class="job-meta">Jan 2020 – Apr 2021 | Bangalore</div>
+        </div>
+        <ul>
+          <li><strong>Platform Migration:</strong> Migrated legacy WordPress monolith to a service-oriented Python/Flask architecture, scaling to 1M+ total users (100K MAU).</li>
+          <li><strong>Monetization:</strong> Commercialized automated evaluation modules into a turnkey B2B technical hiring tool, generating $400K in net-new revenue within 12 months.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Education</div>
+      <p><strong>M.Tech in Software Systems (Data Science & ML)</strong> — BITS Pilani</p>
+      <p><strong>B.Tech in Electronics & Telecommunications</strong> — Sathyabama University</p>
+    </section>
+  </div>
+</body>
+</html>
