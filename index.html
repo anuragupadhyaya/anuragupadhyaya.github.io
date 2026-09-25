@@ -3,845 +3,294 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Primary SEO Meta Tags -->
-  <title>Anurag Upadhyaya - Technical AI Product Leader & AI Systems Architect</title>
-  <meta name="title" content="Anurag Upadhyaya - Technical AI Product Leader & AI Systems Architect">
-  <meta name="description" content="Portfolio and professional resume of Anurag Upadhyaya, AI Product Leader and AI Systems Architect with 12+ years of experience across Post-Training Alignment (SFT, PEFT/LoRA, RLAIF), Stateful Agentic Orchestration (Temporal.io, MCP), High-Throughput Distributed Inference (vLLM, BentoML), and Enterprise AI Governance.">
-  <meta name="keywords" content="AI Product Leader, Staff Data Scientist, AI Systems Architect, Agentic Workflows, Temporal.io, Model Context Protocol, MCP, vLLM, BentoML, SFT, DPO, RLAIF, LoRA, AI Economics, LLM Alignment, Enterprise AI Governance">
-  <meta name="author" content="Anurag Upadhyaya">
-
-  <!-- Open Graph / LinkedIn Preview Cards -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://anuragupadhyaya.github.io/">
-  <meta property="og:title" content="Anurag Upadhyaya - AI Product Leader & AI Systems Architect">
-  <meta property="og:description" content="12-year trajectory spanning Applied Machine Learning, Post-Training Alignment, Multi-Agent Systems Architecture, and Enterprise AI Platform Leadership.">
-  <meta property="og:image" content="https://anuragupadhyaya.github.io/og-image.png">
-
-  <!-- JSON-LD Structured Data for Crawlers & Indexing -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Anurag Upadhyaya",
-    "jobTitle": "Technical AI Product Leader & AI Systems Architect",
-    "email": "anurag.upadhyaya.28@gmail.com",
-    "telephone": "+91-8056028027",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Bangalore",
-      "addressCountry": "India"
-    },
-    "url": "https://anuragupadhyaya.github.io/",
-    "sameAs": [
-      "https://linkedin.com/in/anuragu/"
-    ],
-    "almaMater": [
-      {
-        "@type": "EducationalOrganization",
-        "name": "BITS Pilani"
-      },
-      {
-        "@type": "EducationalOrganization",
-        "name": "Sathyabama University"
-      }
-    ],
-    "knowsAbout": [
-      "Agentic AI Platforms",
-      "Stateful Multi-Agent Workflows",
-      "Temporal.io Orchestration",
-      "Model Context Protocol (MCP)",
-      "LLM Post-Training Alignment",
-      "Supervised Fine-Tuning (SFT)",
-      "Reinforcement Learning from AI Feedback (RLAIF)",
-      "vLLM & BentoML Serving",
-      "AI Unit Economics & COGS Optimization",
-      "Enterprise AI Governance & Observability"
-    ]
-  }
-  </script>
+  <title>Anurag Upadhyaya — Writing & Insights</title>
+  <meta name="description" content="Technical write-ups on Stateful Agentic AI, Post-Training Alignment, and High-Throughput Inference Architecture.">
 
   <style>
     :root {
       --bg: #ffffff;
-      --surface: #f8fafc;
-      --surface-card: #ffffff;
+      --card-bg: #fafafa;
       --border: #e2e8f0;
-      --border-dark: #cbd5e1;
       --text-main: #0f172a;
-      --text-body: #334155;
       --text-muted: #64748b;
       --accent: #2563eb;
-      --accent-soft: #eff6ff;
-      --dark-badge-bg: #0f172a;
-      --dark-badge-text: #f8fafc;
       --radius: 8px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
       background-color: var(--bg);
-      color: var(--text-body);
-      line-height: 1.65;
-      padding: 3.5rem 1.5rem;
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 2.5rem 1.5rem;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
 
-    .container {
-      max-width: 920px;
-      margin: 0 auto;
-    }
+    .container { max-width: 860px; margin: 0 auto; }
 
-    /* Header Section */
-    header {
-      border-bottom: 2px solid var(--text-main);
-      padding-bottom: 2.25rem;
-      margin-bottom: 3rem;
-    }
-
-    .header-top {
+    /* Navigation Header */
+    nav {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-      gap: 1.5rem;
-      margin-bottom: 0.75rem;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      color: var(--text-main);
-      line-height: 1.1;
-    }
-
-    .status-badge {
-      display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      background-color: var(--accent-soft);
-      border: 1px solid #bfdbfe;
-      color: var(--accent);
-      font-size: 0.8rem;
-      font-weight: 600;
-      padding: 0.35rem 0.75rem;
-      border-radius: 9999px;
-      white-space: nowrap;
-    }
-
-    .status-dot {
-      width: 7px;
-      height: 7px;
-      background-color: #22c55e;
-      border-radius: 50%;
-    }
-
-    .subtitle {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--text-main);
-      margin-bottom: 1.25rem;
-      letter-spacing: -0.01em;
-    }
-
-    .contact-bar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem 1.5rem;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
-    }
-
-    .contact-bar a {
-      color: var(--text-main);
-      text-decoration: underline;
-      text-underline-offset: 4px;
-      text-decoration-color: var(--border-dark);
-      transition: all 0.15s ease;
-    }
-
-    .contact-bar a:hover {
-      color: var(--accent);
-      text-decoration-color: var(--accent);
-    }
-
-    /* Section Headers */
-    section {
-      margin-bottom: 3.25rem;
-    }
-
-    .section-title {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid var(--text-main);
-      padding-bottom: 0.4rem;
-      margin-bottom: 1.5rem;
-    }
-
-    h2 {
-      font-size: 0.95rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-main);
-    }
-
-    .section-tag {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    /* Summary Block */
-    .summary-box {
-      font-size: 1.05rem;
-      color: var(--text-main);
-      line-height: 1.75;
-      font-weight: 400;
-    }
-
-    .summary-box strong {
-      font-weight: 700;
-      color: var(--text-main);
-    }
-
-    /* High-Impact Metrics Grid */
-    .metrics-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-      margin-bottom: 3.25rem;
-    }
-
-    .metric-card {
-      background-color: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.15rem 1rem;
-      text-align: center;
-    }
-
-    .metric-value {
-      font-size: 1.85rem;
-      font-weight: 800;
-      color: var(--text-main);
-      letter-spacing: -0.03em;
-      line-height: 1.1;
-      margin-bottom: 0.25rem;
-    }
-
-    .metric-label {
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-    }
-
-    /* Strategic Capabilities / Pillar Cards */
-    .pillars-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.25rem;
-    }
-
-    .pillar-card {
-      background-color: var(--surface-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.35rem;
-      transition: border-color 0.2s ease;
-    }
-
-    .pillar-card:hover {
-      border-color: var(--border-dark);
-    }
-
-    .pillar-header {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .pillar-title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--text-main);
-    }
-
-    .pillar-desc {
-      font-size: 0.88rem;
-      color: var(--text-body);
-      line-height: 1.55;
-    }
-
-    .pillar-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.85rem;
-    }
-
-    .tag {
-      background-color: var(--surface);
-      border: 1px solid var(--border);
-      color: var(--text-main);
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 0.2rem 0.55rem;
-      border-radius: 4px;
-    }
-
-    /* Experience Block */
-    .job {
-      margin-bottom: 2.5rem;
       padding-bottom: 2rem;
-      border-bottom: 1px dashed var(--border);
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2.5rem;
     }
 
-    .job:last-child {
-      margin-bottom: 0;
-      padding-bottom: 0;
-      border-bottom: none;
-    }
-
-    .job-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 0.35rem;
-    }
-
-    .job-title-group {
-      display: flex;
-      align-items: baseline;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-
-    .job-title {
+    .nav-brand {
       font-size: 1.15rem;
       font-weight: 700;
       color: var(--text-main);
+      text-decoration: none;
+      letter-spacing: -0.02em;
     }
 
-    .company-name {
-      font-size: 1.05rem;
+    .nav-links { display: flex; gap: 1.5rem; font-size: 0.9rem; font-weight: 500; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; transition: color 0.15s ease; }
+    .nav-links a.active, .nav-links a:hover { color: var(--text-main); font-weight: 600; }
+
+    /* Featured Post (100% Width - Spans both columns) */
+    .featured-post {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.25rem;
+      margin-bottom: 2rem;
+      transition: border-color 0.2s ease;
+    }
+
+    .featured-post:hover { border-color: #cbd5e1; }
+
+    .post-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .post-tag {
+      background-color: #eff6ff;
+      color: var(--accent);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      border: 1px solid #bfdbfe;
+    }
+
+    .featured-title {
+      font-size: 1.65rem;
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.85rem;
+    }
+
+    .featured-title a { color: var(--text-main); text-decoration: none; }
+    .featured-title a:hover { color: var(--accent); }
+
+    .featured-snippet {
+      font-size: 0.975rem;
+      color: #334155;
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+
+    .read-more {
+      font-size: 0.875rem;
       font-weight: 600;
       color: var(--accent);
+      text-decoration: none;
     }
 
-    .job-meta {
+    .read-more:hover { text-decoration: underline; }
+
+    /* 2-Column Square Grid Layout */
+    .grid-title-bar {
       font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      font-variant-numeric: tabular-nums;
-    }
-
-    .job-subtext {
-      font-size: 0.875rem;
-      color: var(--text-muted);
-      font-weight: 500;
-      margin-bottom: 1rem;
-    }
-
-    ul.experience-list {
-      list-style-type: none;
-      padding-left: 0;
-    }
-
-    ul.experience-list li {
-      position: relative;
-      padding-left: 1.35rem;
-      margin-bottom: 0.85rem;
-      font-size: 0.935rem;
-      color: var(--text-body);
-      line-height: 1.65;
-    }
-
-    ul.experience-list li::before {
-      content: "—";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: var(--text-muted);
       font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
     }
 
-    ul.experience-list li strong {
-      color: var(--text-main);
-      font-weight: 700;
-    }
-
-    /* Education Block */
-    .edu-grid {
+    .posts-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
+      gap: 1.5rem;
     }
 
-    .edu-card {
-      background-color: var(--surface);
+    /* 1:1 Square Card Styling */
+    .square-card {
+      background-color: var(--card-bg);
       border: 1px solid var(--border);
-      padding: 1.15rem 1.25rem;
       border-radius: var(--radius);
-    }
-
-    .edu-degree {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--text-main);
-      margin-bottom: 0.2rem;
-    }
-
-    .edu-school {
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--text-muted);
-    }
-
-    /* Complete Taxonomy Table / Matrix */
-    .skills-matrix {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.875rem;
-    }
-
-    .skills-matrix tr {
-      border-bottom: 1px solid var(--border);
-    }
-
-    .skills-matrix tr:last-child {
-      border-bottom: none;
-    }
-
-    .skills-matrix td {
-      padding: 0.75rem 0.5rem;
-      vertical-align: top;
-    }
-
-    .skills-matrix td.category {
-      font-weight: 700;
-      color: var(--text-main);
-      width: 28%;
-      white-space: nowrap;
-    }
-
-    .skills-matrix td.tokens {
-      color: var(--text-body);
-      line-height: 1.5;
-    }
-
-    /* Footer */
-    footer {
-      margin-top: 4.5rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
+      padding: 1.5rem;
+      aspect-ratio: 1 / 1;
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
-      align-items: center;
+      overflow: hidden;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .square-card:hover {
+      border-color: #cbd5e1;
+      transform: translateY(-2px);
+    }
+
+    .card-top .post-meta { margin-bottom: 0.6rem; }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.6rem;
+    }
+
+    .card-title a { color: var(--text-main); text-decoration: none; }
+    .card-title a:hover { color: var(--accent); }
+
+    .card-snippet {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
       font-size: 0.825rem;
       color: var(--text-muted);
     }
 
-    footer a {
-      color: var(--text-main);
-      text-decoration: underline;
-    }
-
-    /* Print Optimization Styles */
-    @media print {
-      body {
-        padding: 0;
-        background-color: #ffffff;
-        color: #000000;
-      }
-      .container {
-        max-width: 100%;
-      }
-      header {
-        border-bottom-color: #000000;
-      }
-      .status-badge {
-        border: 1px solid #000;
-        color: #000;
-        background: none;
-      }
-      .status-dot {
-        background-color: #000;
-      }
-      .metric-card, .pillar-card, .edu-card {
-        background: none;
-        border: 1px solid #cbd5e1;
-      }
-      .section-title {
-        border-bottom-color: #000000;
-      }
-      a {
-        text-decoration: none;
-        color: #000000;
-      }
-      .job {
-        page-break-inside: avoid;
-      }
-    }
-
-    /* Responsive Breakdown */
-    @media (max-width: 768px) {
-      body {
-        padding: 2rem 1rem;
-      }
-      .header-top {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .metrics-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .pillars-grid {
-        grid-template-columns: 1fr;
-      }
-      .edu-grid {
-        grid-template-columns: 1fr;
-      }
-      .skills-matrix td.category {
-        width: 100%;
-        display: block;
-        padding-bottom: 0.2rem;
-      }
-      .skills-matrix td.tokens {
-        display: block;
-        padding-top: 0;
-        padding-bottom: 0.75rem;
-      }
+    @media (max-width: 680px) {
+      .posts-grid { grid-template-columns: 1fr; }
+      .square-card { aspect-ratio: auto; min-height: 260px; }
     }
   </style>
 </head>
 <body>
 
   <div class="container">
-    
-    <!-- HEADER -->
-    <header>
-      <div class="header-top">
-        <div>
-          <h1>Anurag Upadhyaya</h1>
-          <div class="subtitle">Technical AI Product Leader & AI Systems Architect</div>
-        </div>
-        <div class="status-badge">
-          <span class="status-dot"></span> Available for Strategic AI Leadership
-        </div>
+    <nav>
+      <a href="index.html" class="nav-brand">Anurag Upadhyaya</a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Blog</a>
+        <a href="about.html">About Me</a>
       </div>
+    </nav>
 
-      <div class="contact-bar">
-        <div class="contact-item">📍 Bangalore, India</div>
-        <div class="contact-item">📞 +91-8056028027</div>
-        <div class="contact-item">✉️ <a href="mailto:anurag.upadhyaya.28@gmail.com">anurag.upadhyaya.28@gmail.com</a></div>
-        <div class="contact-item">🔗 <a href="https://linkedin.com/in/anuragu/" target="_blank" rel="noopener">linkedin.com/in/anuragu</a></div>
+    <!-- FEATURED POST (100% Width) -->
+    <article class="featured-post">
+      <div class="post-meta">
+        <span class="post-tag">Agentic AI</span>
+        <span>•</span>
+        <time>March 2026</time>
+        <span>•</span>
+        <span>7 min read</span>
       </div>
-    </header>
-
-    <!-- EXECUTIVE SUMMARY -->
-    <section id="summary">
-      <div class="section-title">
-        <h2>Executive Profile</h2>
-        <span class="section-tag">12-Year Trajectory</span>
-      </div>
-      <p class="summary-box">
-        <strong>Technical AI Product Leader & AI Systems Architect</strong> with a 12-year trajectory spanning Applied Machine Learning, Post-Training Alignment, and Enterprise Platform Engineering[cite: 7]. Expert in converting frontier foundation model research into governed, high-throughput agentic platforms through deep operational mastery of <strong>SOTA LLM architectures, pre-training objectives, and post-training alignments (SFT, PEFT/LoRA, DPO, RLAIF)</strong>[cite: 2, 6]. Proven track record of bridging technical complexity with business value—architecting stateful multi-agent workflows (Temporal.io), optimizing distributed inference clusters (vLLM, BentoML), enforcing zero-trust governance, and managing AI unit economics at enterprise scale[cite: 1, 2, 6].
+      <h1 class="featured-title">
+        <a href="post.html?file=posts/sample-post.md">Architecting Stateful Multi-Agent Workflows with Temporal.io and Llama-3</a>
+      </h1>
+      <p class="featured-snippet">
+        A deep dive into why conversational memory fails long-horizon agentic reasoning, and how configuring durable event-sourcing DAG workflows solves non-deterministic state loss in B2B compliance automation.
       </p>
-    </section>
+      <a href="post.html?file=posts/sample-post.md" class="read-more">Read Full Article →</a>
+    </article>
 
-    <!-- METRICS HIGHLIGHTS GRID -->
-    <section id="metrics">
-      <div class="metrics-grid">
-        <div class="metric-card">
-          <div class="metric-value">80%</div>
-          <div class="metric-label">TTR Reduction (14d → 3d)</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-value">$400K</div>
-          <div class="metric-label">Net-New B2B ARR</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-value">40%</div>
-          <div class="metric-label">Throughput Gain (vLLM)</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-value">1M+</div>
-          <div class="metric-label">Global Platform Users</div>
-        </div>
-      </div>
-    </section>
+    <div class="grid-title-bar">Recent Technical Write-ups</div>
 
-    <!-- STRATEGIC PILLARS / ARCHITECTURAL CAPABILITIES -->
-    <section id="pillars">
-      <div class="section-title">
-        <h2>Strategic & Architectural Pillars</h2>
-        <span class="section-tag">Core Technical Spikes</span>
-      </div>
-      <div class="pillars-grid">
-        
-        <div class="pillar-card">
-          <div class="pillar-header">
-            <span class="pillar-title">1. Stateful Agentic Orchestration</span>
+    <!-- 2-COLUMN SQUARE GRID (1:1 Aspect Ratio) -->
+    <div class="posts-grid">
+
+      <!-- Card 1 -->
+      <article class="square-card">
+        <div class="card-top">
+          <div class="post-meta">
+            <span class="post-tag">Post-Training</span>
+            <span>Feb 2026</span>
           </div>
-          <p class="pillar-desc">
-            Productizing durable "Agentic OS" platforms using Temporal.io DAGs to solve long-horizon, non-conversational reasoning tasks without state-loss[cite: 1, 2, 6]. Standardizing Model Context Protocol (MCP) and LiteLLM gateways for multi-agent tool discovery[cite: 1].
+          <h2 class="card-title">
+            <a href="post.html?file=posts/sample-post.md">Optimizing Domain Adaptation via SFT and PEFT/LoRA</a>
+          </h2>
+          <p class="card-snippet">
+            Evaluating gradient updates across low-rank adapters ($r=64, \alpha=128$) to maximize tool-calling precision while reducing GPU compute COGS.
           </p>
-          <div class="pillar-tags">
-            <span class="tag">Temporal.io</span>
-            <span class="tag">MCP Gateways</span>
-            <span class="tag">DAG Workflows</span>
-            <span class="tag">Human-in-the-Loop</span>
-          </div>
         </div>
+        <a href="post.html?file=posts/sample-post.md" class="read-more">Read Article →</a>
+      </article>
 
-        <div class="pillar-card">
-          <div class="pillar-header">
-            <span class="pillar-title">2. Post-Training & Model Economics</span>
+      <!-- Card 2 -->
+      <article class="square-card">
+        <div class="card-top">
+          <div class="post-meta">
+            <span class="post-tag">Inference</span>
+            <span>Jan 2026</span>
           </div>
-          <p class="pillar-desc">
-            Executing Hugging Face TRL and PyTorch FSDP pipelines for SFT, PEFT (LoRA), and RLAIF[cite: 2, 6]. Driving "Small-Model-First" strategies that slash compute COGS by 80% while preserving frontier-class tool-calling precision[cite: 1, 2, 6].
+          <h2 class="card-title">
+            <a href="post.html?file=posts/sample-post.md">vLLM Memory Tuning & PagedAttention Bottlenecks</a>
+          </h2>
+          <p class="card-snippet">
+            Eliminating KV-cache fragmentation during high-concurrency token generation to maintain P99 tail latencies under strict enterprise SLAs.
           </p>
-          <div class="pillar-tags">
-            <span class="tag">Llama-3 SFT</span>
-            <span class="tag">PEFT / LoRA</span>
-            <span class="tag">RLAIF / DPO</span>
-            <span class="tag">TCO Reduction</span>
-          </div>
         </div>
+        <a href="post.html?file=posts/sample-post.md" class="read-more">Read Article →</a>
+      </article>
 
-        <div class="pillar-card">
-          <div class="pillar-header">
-            <span class="pillar-title">3. Distributed Inference & Serving</span>
+      <!-- Card 3 -->
+      <article class="square-card">
+        <div class="card-top">
+          <div class="post-meta">
+            <span class="post-tag">Governance</span>
+            <span>Dec 2025</span>
           </div>
-          <p class="pillar-desc">
-            Architecting isolated single-tenant BentoML and vLLM inference clusters across commercial banking networks[cite: 2, 6]. Tuning PagedAttention and continuous batching under strict sequence token limits to eliminate GPU OOM spikes[cite: 2, 6].
+          <h2 class="card-title">
+            <a href="post.html?file=posts/sample-post.md">Evaluating Longitudinal Agent Drift in Latent Space</a>
+          </h2>
+          <p class="card-snippet">
+            Using embedding-space cosine distance trajectories paired with programmatic LLM-as-a-judge rubrics to catch silent model decay.
           </p>
-          <div class="pillar-tags">
-            <span class="tag">vLLM Engine</span>
-            <span class="tag">BentoML</span>
-            <span class="tag">PagedAttention</span>
-            <span class="tag">TTFT &lt; 150ms</span>
-          </div>
         </div>
+        <a href="post.html?file=posts/sample-post.md" class="read-more">Read Article →</a>
+      </article>
 
-        <div class="pillar-card">
-          <div class="pillar-header">
-            <span class="pillar-title">4. Governance & Telemetry Science</span>
+      <!-- Card 4 -->
+      <article class="square-card">
+        <div class="card-top">
+          <div class="post-meta">
+            <span class="post-tag">Architecture</span>
+            <span>Nov 2025</span>
           </div>
-          <p class="pillar-desc">
-            Building LLM-as-a-judge evaluation workbenches (calibrated to 92% human correlation)[cite: 2, 6], integrating active NVIDIA NeMo guardrails[cite: 2, 6], and tracking embedding-space cosine distance to detect longitudinal agent drift[cite: 2, 6].
+          <h2 class="card-title">
+            <a href="post.html?file=posts/sample-post.md">Standardizing Model Context Protocol (MCP) Gateways</a>
+          </h2>
+          <p class="card-snippet">
+            Decoupling agentic tool discovery from core application logic using LiteLLM routing and tag-based release management.
           </p>
-          <div class="pillar-tags">
-            <span class="tag">LLM-as-a-Judge</span>
-            <span class="tag">NVIDIA NeMo</span>
-            <span class="tag">Arize Phoenix</span>
-            <span class="tag">OpenTelemetry</span>
-          </div>
         </div>
+        <a href="post.html?file=posts/sample-post.md" class="read-more">Read Article →</a>
+      </article>
 
-      </div>
-    </section>
+    </div>
 
-    <!-- PROFESSIONAL EXPERIENCE -->
-    <section id="experience">
-      <div class="section-title">
-        <h2>Professional Experience</h2>
-        <span class="section-tag">Chronological Leadership</span>
-      </div>
-
-      <!-- SymphonyAI -->
-      <div class="job">
-        <div class="job-header">
-          <div class="job-title-group">
-            <span class="job-title">AI Product Lead / Staff Data Scientist Track</span>
-            <span class="company-name">— SymphonyAI</span>
-          </div>
-          <span class="job-meta">Apr 2021 – Present | Bangalore</span>
-        </div>
-        <div class="job-subtext">Enterprise B2B Generative AI & Autonomous Compliance Agent Platforms</div>
-        <ul class="experience-list">
-          <li>
-            <strong>Zero-to-One Agentic Platform Delivery:</strong> Productized a multi-tenant Enterprise Agentic AI platform across 3 live commercial bank deployments (30+ investigators), collapsing the end-to-end Suspicious Activity Report (SAR) filing lifecycle from 14 days to 3 days (80% TTR reduction)[cite: 1, 2, 5, 6]. Engineered a resilient Temporal.io orchestration layer to manage long-horizon, stateful DAG workflows between hybrid Neuro-Symbolic agents and human analysts[cite: 1, 2, 6].
-          </li>
-          <li>
-            <strong>Post-Training Synthetic Data Engine & Fine-Tuning (SFT/LoRA):</strong> Orchestrated a post-training data engine leveraging heuristic filtering to synthesize a corpus of ~800k agent reasoning trajectories[cite: 2, 6]. Executed Supervised Fine-Tuning (SFT) on Llama-3 (8B) via Hugging Face TRL and PyTorch FSDP[cite: 2, 6]. Engineered parameter-efficient adapters (LoRA; $r=64, \alpha=128$) to achieve 98% tool-calling accuracy and drop redundant agent execution steps by 50%[cite: 2, 6].
-          </li>
-          <li>
-            <strong>Distributed Inference & Serving Layer Optimization:</strong> Architected a low-latency BentoML/vLLM inference cluster hosting the custom 8B AML LLM across banking infrastructures[cite: 2, 6]. Optimized traffic handling via PagedAttention memory parameter tuning and continuous batching, constraining active context sequences to &lt;10k tokens per request to eliminate GPU OOM spikes—securing a 40% aggregate throughput gain and driving tail latencies (TTFT &lt;150ms; stable P99 ITL) within strict SLAs[cite: 2, 6].
-          </li>
-          <li>
-            <strong>AI Platform Infrastructure & Release Governance:</strong> Architected a model-agnostic infrastructure layer using LiteLLM, MCP Gateways, and tag-based Deployment Aliases to cleanly decouple agentic execution logic from upstream customer application code[cite: 1]. Standardized this framework horizontally to enable seamless Blue/Green deployments, slashing Time-to-First-Value (TTFV) by 10x while driving a 300% increase in release velocity and an 80% reduction in production downtime[cite: 1].
-          </li>
-          <li>
-            <strong>Online Agent Governance & Response Drift Analytics:</strong> Engineered a real-time production telemetry suite executing LLM-as-a-judge protocols paired with active NVIDIA NeMo guardrails to intercept hallucinations[cite: 2, 6]. Calibrated automated evaluation rubrics against 1,000+ expert samples (92% human correlation)[cite: 2, 6] while utilizing embedding-space cosine distance tracking to continuously flag longitudinal agent response drift[cite: 2, 6].
-          </li>
-        </ul>
-      </div>
-
-      <!-- MachineHack -->
-      <div class="job">
-        <div class="job-header">
-          <div class="job-title-group">
-            <span class="job-title">Senior Data Scientist / AI Lead</span>
-            <span class="company-name">— MachineHack (Analytics India Magazine)</span>
-          </div>
-          <span class="job-meta">Jan 2020 – Apr 2021 | Bangalore</span>
-        </div>
-        <div class="job-subtext">Global ML Competition Platform & B2B Technical Hiring Enterprise Products</div>
-        <ul class="experience-list">
-          <li>
-            <strong>Platform Architecture Migration & Scaling:</strong> Led the zero-to-one phased migration of a legacy WordPress monolith into a decoupled, service-oriented architecture featuring a standalone UI and a high-throughput Python/Flask backend[cite: 1, 2, 5, 6]. Scaled the global platform to support 1M+ total users (100K MAU) and architected automated execution environments for 20+ comprehensive data science competitions[cite: 2, 5, 6].
-          </li>
-          <li>
-            <strong>High-Throughput Asynchronous Infrastructure:</strong> Directed a cross-functional engineering team of 5 to deploy a distributed asynchronous evaluation engine via Celery and RabbitMQ, processing 25K daily submissions from 5K concurrent users with near-zero latency[cite: 2, 5, 6]. Implemented an optimized dual-database layer (PostgreSQL for identities; MongoDB for high-velocity event logs) and integrated JupyterHub to maximize user session times[cite: 2, 5, 6].
-          </li>
-          <li>
-            <strong>Productization & B2B Monetization Frameworks:</strong> Built 20+ automated evaluation modules validating machine learning submission artifacts against ground-truth objective functions[cite: 2, 5, 6]. Commercialized these predictive tracking modules into a turnkey, enterprise-grade B2B technical hiring platform, generating $400K in net-new revenue within a 12-month span[cite: 1, 2, 5, 6].
-          </li>
-        </ul>
-      </div>
-
-      <!-- Capgemini -->
-      <div class="job">
-        <div class="job-header">
-          <div class="job-title-group">
-            <span class="job-title">Associate Consultant</span>
-            <span class="company-name">— Capgemini India Pvt. Ltd.</span>
-          </div>
-          <span class="job-meta">Mar 2017 – Jan 2019 | Bangalore</span>
-        </div>
-        <div class="job-subtext">Applied Machine Learning & Industrial Quality Systems Engineering</div>
-        <ul class="experience-list">
-          <li>
-            <strong>Applied ML & Quality Systems Engineering:</strong> Designed and productized an ensemble machine learning regression model (KNN/Decision Trees) to predict Yield Stress and Tensile Strength across 10K hardware production samples[cite: 1, 5, 6]; achieved a tight ±5 MAE to successfully deprecate legacy, hard-coded physics models[cite: 1, 5, 6].
-          </li>
-          <li>
-            <strong>Computer Vision Edge Systems:</strong> Developed a zero-to-one computer vision inspection system for manufacturing quality control[cite: 1, 5, 6]. Engineered an end-to-end edge inference pipeline processing high-velocity image streams from high-speed cameras, applying data-preprocessing layers and ResNet-50 classification architectures to achieve 80% automated inspection accuracy across 10K billets[cite: 1, 5, 6].
-          </li>
-        </ul>
-      </div>
-
-      <!-- Yottaasys -->
-      <div class="job">
-        <div class="job-header">
-          <div class="job-title-group">
-            <span class="job-title">Associate Data Scientist</span>
-            <span class="company-name">— Yottaasys AI Products Pvt. Ltd.</span>
-          </div>
-          <span class="job-meta">Sep 2016 – Mar 2017 | Bangalore</span>
-        </div>
-        <ul class="experience-list">
-          <li>
-            Contributed core machine learning algorithms to the Decision Sciences Factory (DSF) platform—a workflow-based engine for end-to-end data ingestion, predictive modeling, and model deployment[cite: 2, 5, 6]. Engineered a standardized text pre-processing pipeline providing out-of-the-box regex parsing, stemming, and lemmatization[cite: 2, 5, 6].
-          </li>
-        </ul>
-      </div>
-
-      <!-- Toshiba -->
-      <div class="job">
-        <div class="job-header">
-          <div class="job-title-group">
-            <span class="job-title">Senior Research Engineer, R&D</span>
-            <span class="company-name">— Toshiba Software India Pvt. Ltd.</span>
-          </div>
-          <span class="job-meta">Apr 2013 – July 2016 | Hyderabad</span>
-        </div>
-        <ul class="experience-list">
-          <li>
-            <strong>High-Dimensional Anomaly Detection:</strong> Engineered a multi-class classification pipeline identifying hot-strip rolling process anomalies (&lt;10% error)[cite: 2, 4, 5, 6]. Derived ~2.5K statistical features (Moments of Distribution) from time-series sensors, using PCA and Autoencoders for dimensionality reduction prior to modeling with Deep Neural Networks[cite: 2, 4, 5, 6].
-          </li>
-          <li>
-            <strong>Time-Series Predictive Maintenance:</strong> Developed a univariate LSTM time-series framework to model heater temperature degradation and predict Remaining Useful Life (RUL)[cite: 2, 4, 5, 6], delivering an automated 14-day lead time with 90% prediction accuracy to eliminate unplanned downtime[cite: 1, 2, 4, 5, 6].
-          </li>
-          <li>
-            <strong>Constrained Mathematical Optimization:</strong> Solved the dynamic "Economic Dispatch" power planning problem across a 10-generator grid by building a 24-hour optimization engine combining Genetic Algorithms (GA) and Particle Swarm Optimization (PSO) to maximize output efficiency under non-linear constraints[cite: 1, 2, 5, 6]. Ranked top 1% of 250 peers (Game Changer Award & double promotion)[cite: 2, 5, 6].
-          </li>
-        </ul>
-      </div>
-
-    </section>
-
-    <!-- EDUCATION -->
-    <section id="education">
-      <div class="section-title">
-        <h2>Education</h2>
-        <span class="section-tag">Academic Credentials</span>
-      </div>
-      <div class="edu-grid">
-        <div class="edu-card">
-          <div class="edu-degree">M.Tech in Software Systems</div>
-          <div class="edu-school">BITS Pilani | Specialization in Data Science & ML</div>
-        </div>
-        <div class="edu-card">
-          <div class="edu-degree">B.Tech in Electronics & Telecommunications</div>
-          <div class="edu-school">Sathyabama University, Chennai</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TECHNICAL TAXONOMY MATRIX -->
-    <section id="taxonomy">
-      <div class="section-title">
-        <h2>Technical Taxonomy & Competency Matrix</h2>
-        <span class="section-tag">ATS & Recruiter Sourcing Tokens</span>
-      </div>
-      <table class="skills-matrix">
-        <tr>
-          <td class="category">GenAI & LLM Alignment</td>
-          <td class="tokens">SOTA Transformers, MoE, SFT, DPO, RLAIF, PEFT (LoRA/QLoRA), PyTorch FSDP, DeepSpeed, Hugging Face TRL, Prompt Engineering, Knowledge Distillation.</td>
-        </tr>
-        <tr>
-          <td class="category">Agentic Infrastructure</td>
-          <td class="tokens">Temporal.io (Stateful DAGs), Model Context Protocol (MCP Gateways), LiteLLM, Tool-Calling Protocols, Human-in-the-Loop (HITL), Multi-Agent Fan-out Graphs.</td>
-        </tr>
-        <tr>
-          <td class="category">Serving & Inference</td>
-          <td class="tokens">vLLM, BentoML, Ray Serve, PagedAttention, Continuous Batching, KV-Cache Optimization, TTFT & ITL Latency Tuning, GPU VRAM Allocation.</td>
-        </tr>
-        <tr>
-          <td class="category">Governance & Telemetry</td>
-          <td class="tokens">LLM-as-a-Judge Evaluation, NVIDIA NeMo Guardrails, Arize Phoenix, OpenTelemetry, Cosine Distance Drift Tracking, Zero-Trust PII Scrubbing.</td>
-        </tr>
-        <tr>
-          <td class="category">Classical ML & Math</td>
-          <td class="tokens">Time-Series (LSTM, ARIMA), Computer Vision (ResNet-50), Genetic Algorithms (GA), Particle Swarm Optimization (PSO), Regression, KNN, Decision Trees.</td>
-        </tr>
-        <tr>
-          <td class="category">Data & Architecture</td>
-          <td class="tokens">Python, Flask, Celery, RabbitMQ, PostgreSQL, MongoDB, Docker, Microservices, REST APIs, System Architecture, JupyterHub, MLflow.</td>
-        </tr>
-      </table>
-    </section>
-
-    <!-- FOOTER -->
     <footer>
-      <div>&copy; 2026 Anurag Upadhyaya. Hosted permanently on GitHub Pages.</div>
-      <div><a href="mailto:anurag.upadhyaya.28@gmail.com">Get in Touch</a></div>
+      &copy; 2026 Anurag Upadhyaya. Built with static Markdown & Hosted on GitHub Pages.
     </footer>
-
   </div>
 
 </body>
