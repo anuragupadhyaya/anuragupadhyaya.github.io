@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article — Anurag Upadhyaya</title>
+  
+  <!-- Fast client-side Markdown Parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --border: #e2e8f0;
+      --text-main: #0f172a;
+      --text-body: #334155;
+      --text-muted: #64748b;
+      --accent: #2563eb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-body);
+      line-height: 1.7;
+      padding: 2.5rem 1.5rem;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 740px; margin: 0 auto; }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2.5rem;
+    }
+    .nav-brand { font-size: 1.15rem; font-weight: 700; color: var(--text-main); text-decoration: none; }
+    .nav-links { display: flex; gap: 1.5rem; font-size: 0.9rem; font-weight: 500; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; }
+    .nav-links a:hover { color: var(--text-main); }
+    
+    /* Markdown Content Styling */
+    #content h1 { font-size: 2.25rem; font-weight: 800; color: var(--text-main); margin-bottom: 1rem; letter-spacing: -0.02em; }
+    #content h2 { font-size: 1.4rem; font-weight: 700; color: var(--text-main); margin-top: 2rem; margin-bottom: 0.75rem; }
+    #content p { margin-bottom: 1.25rem; font-size: 1.05rem; }
+    #content ul, #content ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+    #content li { margin-bottom: 0.5rem; }
+    #content code { background-color: #f1f5f9; padding: 0.2rem 0.4rem; border-radius: 4px; font-family: monospace; font-size: 0.9em; }
+    #content pre { background-color: #0f172a; color: #f8fafc; padding: 1.25rem; border-radius: 6px; overflow-x: auto; margin-bottom: 1.5rem; }
+    #content pre code { background: none; color: inherit; padding: 0; }
+    #content blockquote { border-left: 3px solid var(--accent); padding-left: 1rem; color: var(--text-muted); font-style: italic; margin-bottom: 1.25rem; }
+    
+    .back-link { display: inline-block; margin-bottom: 1.5rem; font-size: 0.875rem; font-weight: 600; color: var(--accent); text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="index.html" class="nav-brand">Anurag Upadhyaya</a>
+      <div class="nav-links">
+        <a href="index.html">Blog</a>
+        <a href="about.html">About Me</a>
+      </div>
+    </nav>
+
+    <a href="index.html" class="back-link">← Back to Articles</a>
+    <main id="content">Loading article...</main>
+  </div>
+
+  <script>
+    // Fetch and render Markdown file dynamically
+    const params = new URLSearchParams(window.location.search);
+    const mdFile = params.get('file') || 'posts/sample-post.md';
+
+    fetch(mdFile)
+      .then(response => {
+        if (!response.ok) throw new Error('Post not found');
+        return response.text();
+      })
+      .then(text => {
+        document.getElementById('content').innerHTML = marked.parse(text);
+      })
+      .catch(err => {
+        document.getElementById('content').innerHTML = `<h1>404 - Article Not Found</h1><p>The requested write-up could not be loaded.</p>`;
+      });
+  </script>
+</body>
+</html>
